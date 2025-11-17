@@ -1,0 +1,7 @@
+{
+  "name": "Cast Sync Only",
+  "version": "1.0.0",
+  "author": "Taverneiro Legalizado",
+  "scripts": ["index.js"],
+  "icon": "icon.png"
+}
