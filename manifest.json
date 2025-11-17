@@ -1,7 +1,12 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
   "name": "Cast Sync Only",
   "version": "1.0.0",
   "author": "Taverneiro Legalizado",
-  "scripts": ["index.js"]
+  "scripts": [
+    {
+      "path": "index.js",
+      "run_at": "client"
+    }
+  ]
 }
