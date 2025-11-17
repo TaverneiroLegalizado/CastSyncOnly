@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body style="background:#111; color:white; font-family:sans-serif; padding:10px;">
+    <h3>Sync View (CAST somente)</h3>
+    <button id="syncBtn">Sincronizar CAST</button>
+
+    <script type="module">
+      import OBR from "https://unpkg.com/@owlbear-rodeo/sdk@^2";
+
+      OBR.onReady(async () => {
+        const players = await OBR.party.getPlayers();
+        const castPlayer = players.find(p => p.type === "CAST");
+
+        document.getElementById("syncBtn").onclick = async () => {
+          if (!castPlayer) {
+            alert("Nenhum CAST conectado!");
+            return;
+          }
+
+          await OBR.player.setSyncView(true, { playerId: castPlayer.id });
+          alert("O CAST agora está seguindo sua câmera!");
+        };
+      });
+    </script>
+  </body>
+</html>

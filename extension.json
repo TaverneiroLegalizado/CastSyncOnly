@@ -1,0 +1,7 @@
+{
+  "name": "CastSyncOnly",
+  "version": "1.0.0",
+  "manifest_version": 1,
+  "description": "Sincroniza somente o CAST",
+  "scripts": ["index.html"]
+}
